@@ -23,7 +23,6 @@ SNS "1" --> "*" EMPLOYEE
 class DGS {
     - names
     -vatnumber
-     size()
 }
 
 class SNS {
@@ -62,8 +61,7 @@ class NURSE {
    - phone
    -address
    - code (IDEmployee)
-Object[] elementData
-size()
+
 }
 class SNSUSER {
 - name
@@ -144,15 +142,15 @@ class USERSESSION {
 
 }
 enum TimeUnit {
-HOURS
-MINUTES
-SECONDS
+Hours
+Minutes
+Seconds
 }
 
 enum Date {
-DAYS
-MONTH
-YEAR
+Days
+Month
+Year
 }
 
 @enduml
