@@ -1,19 +1,10 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
 
-SNS "1" --> "*" EMPLOYEE
+
 
 
 class DGS {
@@ -74,16 +65,28 @@ class VACCINEAPPOINTMENT {
 class VACCINE {
 -Id
 -Name
--Brand
--Vaccine Type
--adverseReactions
+
 }
 class VACCINETYPE{
  -Code
- -Short description
- -Vaccine technology
+}
+class VACCINATION{
+ -Code
 }
 
 
 
+DGS "1" --> "*" SNS
+SNS "1" --> "*" EMPLOYEE
+SNS "1" --> "*" SNSUSER
+EMPLOYEE  "1" --> "0.1" RECEPTIONIST
+EMPLOYEE  "1" --> "0.1" NURSE
+EMPLOYEE  "1" --> "0.1" ADMIN
+SNS "1" --> "0.1" VACCINATIONCENTER
+SNS "1" --> "0.1" HEALTHCARECENTER
+NURSE "1" --> "*" VACCINATION
+RECEPTIONIST"0,1" --> "*" VACCINEAPPOINTMENT
+VACCINEAPPOINTMENT"*" --> "1" VACCINETYPE
+VACCINE"*" --> "1" VACCINETYPE
+VACCINE"*" --> "1" VACCINATION
 @enduml
