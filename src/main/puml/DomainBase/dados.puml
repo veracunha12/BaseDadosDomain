@@ -25,84 +25,50 @@ class DGS {
 class SNS {
     - String name
     - String vatNumber
-    - String website
-    - String phone
-    - String email
-
-    - addTask(task)
-    - validateTask(task)
-    + anyEmployeeHasEmail(email)
-    + Organization(name, vatNumber, webSite, phone, email, postalAddress, manager)
-    + createTask(reference, description, informalDesccription,\ntechnicalDescription, duration, cost, taskCategoryDescription)
-    - getEmployeeByEmail(email)
 
 }
 class EMPLOYEE {
-Name
-Address
-Phone
-Code
+-Name
+-Code
 }
 class ADMIN {
 -Role
-
+-Name
+-code
 }
 class RECEPTIONIST {
- - name
- - email
- - position
- - phone
- -Role
-}
-class RECEPTIONIST {
-Object[] elementData
+-Role
+-Name
+-code
 
 }
+
 class NURSE {
    -name
-   - email
-   - position
-   - phone
-   -address
-   - code (IDEmployee)
+   -Role
+   -code
 
 
 }
 class SNSUSER {
 
 - name
-- birthDate
-- sex:
-- postalAddress
-- phoneNumber
-- emailAddress
 - citizenCardNumber
 - snsUserNumber
 
-Object[] elementData
-
-
 }
 class VACCINATIONCENTER {
-Object[] elementData
+-name
 
 }
 class HEALTHCARECENTER {
-Object[] elementData
+-name
 
 }
-class VACCINATION {
-Object[] elementData
 
-}
 class VACCINEAPPOINTMENT {
-<<<<<<< Updated upstream
 - date
 - time
-- vaccineAppointment
-
-Object[] elementData
-
 
 }
 class VACCINE {
@@ -116,20 +82,6 @@ class VACCINETYPE{
  -Code
  -Short description
  -Vaccine technology
-}
-class VACCINEAPPOINTMENT {
-
-    - time: String
-    - date: Date
-    - cost: double
-    - vaccineType: VaccineType
-    - localVaccineCenters: LocalVaccineCenters
-
-    + scheduleAppointment(): void
-    + cancelAppointment(): void
-    + changeAppointment(): void
-
-
 }
 
 
