@@ -46,8 +46,8 @@ Object[] elementData
 size()
 }
 class ADMIN {
-Object[] elementData
-size()
+-Role
+
 }
 class RECEPTIONIST {
  - name
