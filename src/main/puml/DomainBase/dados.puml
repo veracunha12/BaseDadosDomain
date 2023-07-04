@@ -16,14 +16,10 @@ AbstractList <|-- ArrayList
 SNS "1" --> "*" EMPLOYEE
 
 
-
-
-
-
 class DGS {
     - names
     -vatnumber
-     size()
+
 }
 
 class SNS {
@@ -42,10 +38,13 @@ class SNS {
 
 }
 class EMPLOYEE {
-Object[] elementData
-size()
+Name
+Address
+Phone
+Code
 }
 class ADMIN {
+<<<<<<< Updated upstream
 -Role
 
 }
@@ -54,6 +53,13 @@ class RECEPTIONIST {
  - email
  - position
  - phone
+=======
+Role
+}
+class RECEPTIONIST {
+Object[] elementData
+
+>>>>>>> Stashed changes
 }
 class NURSE {
    -name
@@ -63,9 +69,10 @@ class NURSE {
    -address
    - code (IDEmployee)
 Object[] elementData
-size()
+
 }
 class SNSUSER {
+<<<<<<< Updated upstream
 - name
 - birthDate
 - sex:
@@ -74,23 +81,32 @@ class SNSUSER {
 - emailAddress
 - citizenCardNumber
 - snsUserNumber
+=======
+Object[] elementData
+
+>>>>>>> Stashed changes
 }
 class VACCINATIONCENTER {
 Object[] elementData
-size()
+
 }
 class HEALTHCARECENTER {
 Object[] elementData
-size()
+
 }
 class VACCINATION {
 Object[] elementData
-size()
+
 }
 class VACCINEAPPOINTMENT {
+<<<<<<< Updated upstream
 - date
 - time
 - vaccineAppointment
+=======
+Object[] elementData
+
+>>>>>>> Stashed changes
 }
 class VACCINE {
 -Id
@@ -104,6 +120,7 @@ class VACCINETYPE{
  -Vaccine technology
 }
 class VACCINEAPPOINTMENT {
+<<<<<<< Updated upstream
     - time: String
     - date: Date
     - cost: double
@@ -112,28 +129,32 @@ class VACCINEAPPOINTMENT {
 
     + scheduleAppointment(): void
     + cancelAppointment(): void
+=======
+Object[] elementData
+>>>>>>> Stashed changes
 
 }
 class ADVERSEREACTIONS {
 Object[] elementData
-size()
+
 }
 class ARRIVAL{
 Object[] elementData
-size()
+
 }
 class RECOVERYROOM{
 Object[] elementData
-size()
+
 }
 class WAITINGROOM {
 Object[] elementData
-size()
+
 }
 class PANDEMIC {
 Object[] elementData
-size()
+
 }
+<<<<<<< Updated upstream
 class APPLICATIONSESSION{
     + static getInstance()
     + getCurrentSession()
@@ -141,6 +162,14 @@ class APPLICATIONSESSION{
 }
 class USERSESSION {
 + getUserEmail()
+=======
+class ApplicationSession{
+Object[] elementData
+
+}
+class UserSession {
+Object[] elementData
+>>>>>>> Stashed changes
 
 }
 enum TimeUnit {
