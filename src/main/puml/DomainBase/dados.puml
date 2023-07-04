@@ -93,19 +93,26 @@ class VACCINEAPPOINTMENT {
 - vaccineAppointment
 }
 class VACCINE {
-Id
-Name
-Brand
-Vaccine Type
+-Id
+-Name
+-Brand
+-Vaccine Type
 }
 class VACCINETYPE{
- Code
- Short description
- Vaccine technology
+ -Code
+ -Short description
+ -Vaccine technology
 }
 class VACCINEAPPOINTMENT {
-Object[] elementData
-size()
+    - time: String
+    - date: Date
+    - cost: double
+    - vaccineType: VaccineType
+    - localVaccineCenters: LocalVaccineCenters
+
+    + scheduleAppointment(): void
+    + cancelAppointment(): void
+
 }
 class ADVERSEREACTIONS {
 Object[] elementData
