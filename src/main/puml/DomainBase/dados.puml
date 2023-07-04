@@ -54,6 +54,12 @@ Object[] elementData
 size()
 }
 class NURSE {
+   -name
+   - email
+   - position
+   - phone
+   -address
+   - code (IDEmployee)
 Object[] elementData
 size()
 }
@@ -109,13 +115,14 @@ class PANDEMIC {
 Object[] elementData
 size()
 }
-class ApplicationSession{
-Object[] elementData
-size()
+class APPLICATIONSESSION{
+    + static getInstance()
+    + getCurrentSession()
+
 }
-class UserSession {
-Object[] elementData
-size()
+class USERSESSION {
++ getUserEmail()
+
 }
 enum TimeUnit {
 HOURS
