@@ -1,0 +1,105 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class DGS {
+Object[] elementData
+size()
+}
+
+class SNS {
+Object[] elementData
+size()
+}
+class EMPLOYEE {
+Object[] elementData
+size()
+}
+class ADMIN {
+Object[] elementData
+size()
+}
+class RECEPTIONIST {
+Object[] elementData
+size()
+}
+class NURSE {
+Object[] elementData
+size()
+}
+class SNSUSER {
+Object[] elementData
+size()
+}
+class VACCINATIONCENTER {
+Object[] elementData
+size()
+}
+class HEALTHCARECENTER {
+Object[] elementData
+size()
+}
+class VACCINATION {
+Object[] elementData
+size()
+}
+class VACCINEAPPOINTMENT {
+Object[] elementData
+size()
+}
+class VACCINE {
+Object[] elementData
+size()
+}
+class VACCINETYPE{
+Object[] elementData
+size()
+}
+class VACCINEAPPOINTMENT {
+Object[] elementData
+size()
+}
+class ADVERSEREACTIONS {
+Object[] elementData
+size()
+}
+class ARRIVAL{
+Object[] elementData
+size()
+}
+class RECOVERYROOM{
+Object[] elementData
+size()
+}
+class WAITING {
+Object[] elementData
+size()
+}
+class PANDEMIC {
+Object[] elementData
+size()
+}
+enum TimeUnit {
+HOURS
+MINUTES
+SECONDS
+}
+
+enum Date {
+DAYS
+MONTH
+YEAR
+}
+
+@enduml
