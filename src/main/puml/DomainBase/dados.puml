@@ -13,14 +13,33 @@ Collection <|- List
 AbstractCollection <|- AbstractList
 AbstractList <|-- ArrayList
 
+SNS "1" --> "*" EMPLOYEE
+
+
+
+
+
+
 class DGS {
-Object[] elementData
-size()
+    - names
+    -vatnumber
+     size()
 }
 
 class SNS {
-Object[] elementData
-size()
+  - String name
+    - String vatNumber
+    - String website
+    - String phone
+    - String email
+
+    - addTask(task)
+    - validateTask(task)
+    + anyEmployeeHasEmail(email)
+    + Organization(name, vatNumber, webSite, phone, email, postalAddress, manager)
+    + createTask(reference, description, informalDesccription,\ntechnicalDescription, duration, cost, taskCategoryDescription)
+    - getEmployeeByEmail(email)
+
 }
 class EMPLOYEE {
 Object[] elementData
@@ -68,12 +87,15 @@ class VACCINEAPPOINTMENT {
 - vaccineAppointment
 }
 class VACCINE {
-Object[] elementData
-size()
+Id
+Name
+Brand
+Vaccine Type
 }
 class VACCINETYPE{
-Object[] elementData
-size()
+ Code
+ Short description
+ Vaccine technology
 }
 class VACCINEAPPOINTMENT {
 Object[] elementData
@@ -96,6 +118,14 @@ Object[] elementData
 size()
 }
 class PANDEMIC {
+Object[] elementData
+size()
+}
+class ApplicationSession{
+Object[] elementData
+size()
+}
+class UserSession {
 Object[] elementData
 size()
 }
