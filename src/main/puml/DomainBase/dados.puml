@@ -78,12 +78,15 @@ Object[] elementData
 size()
 }
 class VACCINE {
-Object[] elementData
-size()
+Id
+Name
+Brand
+Vaccine Type
 }
 class VACCINETYPE{
-Object[] elementData
-size()
+ Code
+ Short description
+ Vaccine technology
 }
 class VACCINEAPPOINTMENT {
 Object[] elementData
