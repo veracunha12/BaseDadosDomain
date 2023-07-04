@@ -31,16 +31,24 @@ Object[] elementData
 size()
 }
 class RECEPTIONIST {
-Object[] elementData
-size()
+ - name
+ - email
+ - position
+ - phone
 }
 class NURSE {
 Object[] elementData
 size()
 }
 class SNSUSER {
-Object[] elementData
-size()
+- name
+- birthDate
+- sex:
+- postalAddress
+- phoneNumber
+- emailAddress
+- citizenCardNumber
+- snsUserNumber
 }
 class VACCINATIONCENTER {
 Object[] elementData
@@ -55,8 +63,9 @@ Object[] elementData
 size()
 }
 class VACCINEAPPOINTMENT {
-Object[] elementData
-size()
+- date
+- time
+- vaccineAppointment
 }
 class VACCINE {
 Object[] elementData
@@ -82,7 +91,7 @@ class RECOVERYROOM{
 Object[] elementData
 size()
 }
-class WAITING {
+class WAITINGROOM {
 Object[] elementData
 size()
 }
