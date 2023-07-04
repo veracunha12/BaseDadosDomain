@@ -17,16 +17,13 @@ SNS "1" --> "*" EMPLOYEE
 
 
 class DGS {
-    - names
-    -vatnumber
-<<<<<<< HEAD
-=======
+    - name
+    - vatnumber
 
->>>>>>> 027d261d8d19e38d983a4fb8637350db332bd5aa
 }
 
 class SNS {
-  - String name
+    - String name
     - String vatNumber
     - String website
     - String phone
@@ -47,7 +44,6 @@ Phone
 Code
 }
 class ADMIN {
-<<<<<<< Updated upstream
 -Role
 
 }
@@ -56,13 +52,11 @@ class RECEPTIONIST {
  - email
  - position
  - phone
-=======
-Role
+ -Role
 }
 class RECEPTIONIST {
 Object[] elementData
 
->>>>>>> Stashed changes
 }
 class NURSE {
    -name
@@ -71,14 +65,11 @@ class NURSE {
    - phone
    -address
    - code (IDEmployee)
-<<<<<<< HEAD
-=======
-Object[] elementData
->>>>>>> 027d261d8d19e38d983a4fb8637350db332bd5aa
+
 
 }
 class SNSUSER {
-<<<<<<< Updated upstream
+
 - name
 - birthDate
 - sex:
@@ -87,10 +78,10 @@ class SNSUSER {
 - emailAddress
 - citizenCardNumber
 - snsUserNumber
-=======
+
 Object[] elementData
 
->>>>>>> Stashed changes
+
 }
 class VACCINATIONCENTER {
 Object[] elementData
@@ -109,16 +100,17 @@ class VACCINEAPPOINTMENT {
 - date
 - time
 - vaccineAppointment
-=======
+
 Object[] elementData
 
->>>>>>> Stashed changes
+
 }
 class VACCINE {
 -Id
 -Name
 -Brand
 -Vaccine Type
+-adverseReactions
 }
 class VACCINETYPE{
  -Code
@@ -126,7 +118,7 @@ class VACCINETYPE{
  -Vaccine technology
 }
 class VACCINEAPPOINTMENT {
-<<<<<<< Updated upstream
+
     - time: String
     - date: Date
     - cost: double
@@ -135,59 +127,11 @@ class VACCINEAPPOINTMENT {
 
     + scheduleAppointment(): void
     + cancelAppointment(): void
-=======
-Object[] elementData
->>>>>>> Stashed changes
+    + changeAppointment(): void
+
 
 }
-class ADVERSEREACTIONS {
-Object[] elementData
 
-}
-class ARRIVAL{
-Object[] elementData
 
-}
-class RECOVERYROOM{
-Object[] elementData
-
-}
-class WAITINGROOM {
-Object[] elementData
-
-}
-class PANDEMIC {
-Object[] elementData
-
-}
-<<<<<<< Updated upstream
-class APPLICATIONSESSION{
-    + static getInstance()
-    + getCurrentSession()
-
-}
-class USERSESSION {
-+ getUserEmail()
-=======
-class ApplicationSession{
-Object[] elementData
-
-}
-class UserSession {
-Object[] elementData
->>>>>>> Stashed changes
-
-}
-enum TimeUnit {
-Hours
-Minutes
-Seconds
-}
-
-enum Date {
-Days
-Month
-Year
-}
 
 @enduml
