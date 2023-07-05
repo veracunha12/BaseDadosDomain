@@ -1,0 +1,83 @@
+@startuml
+
+class DGS {
+    - name: String
+    - vatnumber: String
+}
+
+class SNS {
+    - name: String
+    - vatNumber: String
+}
+
+class EMPLOYEE {
+    - Name: String
+    - Code: String
+}
+
+class ADMIN {
+    - Role: String
+    - Name: String
+    - Code: String
+}
+
+class RECEPTIONIST {
+    - Role: String
+    - Name: String
+    - Code: String
+}
+
+class NURSE {
+    - name: String
+    - Role: String
+    - Code: String
+}
+
+class SNSUSER {
+    - name: String
+    - citizenCardNumber: String
+    - snsUserNumber: String
+}
+
+class VACCINATIONCENTER {
+    - name: String
+}
+
+class HEALTHCARECENTER {
+    - name: String
+}
+
+class VACCINEAPPOINTMENT {
+    - date: String
+    - time: String
+}
+
+class VACCINE {
+    - Id: String
+    - Name: String
+}
+
+class VACCINETYPE {
+    - Code: String
+}
+
+class VACCINATION {
+    - Code: String
+}
+
+DGS "1" --> "*" SNS
+SNS "1" --> "*" EMPLOYEE
+SNS "1" --> "*" SNSUSER
+EMPLOYEE  "1" --> "0.1" RECEPTIONIST
+EMPLOYEE  "1" --> "0.1" NURSE
+EMPLOYEE  "1" --> "0.1" ADMIN
+SNS "1" --> "0.1" VACCINATIONCENTER
+SNS "1" --> "0.1" HEALTHCARECENTER
+NURSE "1" --> "*" VACCINATION
+RECEPTIONIST "0..1" --> "*" VACCINEAPPOINTMENT
+VACCINEAPPOINTMENT "*" --> "1" VACCINETYPE
+VACCINE "*" --> "1" VACCINETYPE
+VACCINE "*" --> "1" VACCINATION
+SNSUSER "1" --> "*" VACCINATION
+
+@enduml
