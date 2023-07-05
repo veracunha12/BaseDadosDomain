@@ -1,141 +1,90 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-SNS "1" --> "*" EMPLOYEE
 
 
 
 class DGS {
-    - names
-    -vatnumber
-     size()
+    - name
+    - vatnumber
+
 }
 
 class SNS {
-  - String name
+    - String name
     - String vatNumber
-    - String website
-    - String phone
-    - String email
-
-    - addTask(task)
-    - validateTask(task)
-    + anyEmployeeHasEmail(email)
-    + Organization(name, vatNumber, webSite, phone, email, postalAddress, manager)
-    + createTask(reference, description, informalDesccription,\ntechnicalDescription, duration, cost, taskCategoryDescription)
-    - getEmployeeByEmail(email)
 
 }
 class EMPLOYEE {
-Object[] elementData
-size()
+-Name
+-Code
 }
 class ADMIN {
-Object[] elementData
-size()
+-Role
+-Name
+-code
 }
 class RECEPTIONIST {
- - name
- - email
- - position
- - phone
+-Role
+-Name
+-code
+
 }
+
 class NURSE {
-Object[] elementData
-size()
+   -name
+   -Role
+   -code
+
+
 }
 class SNSUSER {
+
 - name
-- birthDate
-- sex:
-- postalAddress
-- phoneNumber
-- emailAddress
 - citizenCardNumber
 - snsUserNumber
+
 }
 class VACCINATIONCENTER {
-Object[] elementData
-size()
+-name
+
 }
 class HEALTHCARECENTER {
-Object[] elementData
-size()
+-name
+
 }
-class VACCINATION {
-Object[] elementData
-size()
-}
+
 class VACCINEAPPOINTMENT {
 - date
 - time
-- vaccineAppointment
+
 }
 class VACCINE {
-Id
-Name
-Brand
-Vaccine Type
+-Id
+-Name
+
 }
 class VACCINETYPE{
- Code
- Short description
- Vaccine technology
+ -Code
 }
-class VACCINEAPPOINTMENT {
-Object[] elementData
-size()
-}
-class ADVERSEREACTIONS {
-Object[] elementData
-size()
-}
-class ARRIVAL{
-Object[] elementData
-size()
-}
-class RECOVERYROOM{
-Object[] elementData
-size()
-}
-class WAITINGROOM {
-Object[] elementData
-size()
-}
-class PANDEMIC {
-Object[] elementData
-size()
-}
-class ApplicationSession{
-Object[] elementData
-size()
-}
-class UserSession {
-Object[] elementData
-size()
-}
-enum TimeUnit {
-HOURS
-MINUTES
-SECONDS
+class VACCINATION{
+ -Code
 }
 
-enum Date {
-DAYS
-MONTH
-YEAR
-}
 
+
+DGS "1" --> "*" SNS
+SNS "1" --> "*" EMPLOYEE
+SNS "1" --> "*" SNSUSER
+EMPLOYEE  "1" --> "0.1" RECEPTIONIST
+EMPLOYEE  "1" --> "0.1" NURSE
+EMPLOYEE  "1" --> "0.1" ADMIN
+SNS "1" --> "0.1" VACCINATIONCENTER
+SNS "1" --> "0.1" HEALTHCARECENTER
+NURSE "1" --> "*" VACCINATION
+RECEPTIONIST"0,1" --> "*" VACCINEAPPOINTMENT
+VACCINEAPPOINTMENT"*" --> "1" VACCINETYPE
+VACCINE"*" --> "1" VACCINETYPE
+VACCINE"*" --> "1" VACCINATION
+SNSUSER"1" --> "*" VACCINATION
 @enduml
